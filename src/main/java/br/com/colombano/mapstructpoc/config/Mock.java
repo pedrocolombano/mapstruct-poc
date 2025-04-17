@@ -70,6 +70,7 @@ public class Mock {
             address.setState(faker.address().state());
             address.setZip(faker.address().zipCode());
             address.setStreet(faker.address().streetAddress());
+            address.setNumber(faker.address().streetAddressNumber());
             address.setUser(user);
 
             addresses.add(address);
