@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.ZonedDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -23,7 +23,7 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-    private ZonedDateTime birthDate;
+    private LocalDate birthDate;
 
 
 }
