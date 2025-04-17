@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -24,6 +26,11 @@ public class User {
     private String email;
     private String password;
     private LocalDate birthDate;
+
+    @OneToMany(fetch = FetchType.EAGER,
+               cascade = CascadeType.ALL,
+               mappedBy = "user")
+    private Set<Address> addresses = new HashSet<>();
 
 
 }

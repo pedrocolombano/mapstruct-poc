@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -22,5 +24,6 @@ public class UserDto implements Serializable {
     private String email;
     private String password;
     private LocalDate birthDate;
+    private Set<AddressDto> addresses = new HashSet<>();
 
 }
