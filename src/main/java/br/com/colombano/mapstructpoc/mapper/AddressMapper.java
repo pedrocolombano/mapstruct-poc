@@ -2,22 +2,11 @@ package br.com.colombano.mapstructpoc.mapper;
 
 import br.com.colombano.mapstructpoc.model.dto.AddressDto;
 import br.com.colombano.mapstructpoc.model.entity.Address;
-import org.springframework.stereotype.Component;
+import org.mapstruct.Mapper;
 
-@Component
-public class AddressMapper {
+@Mapper(componentModel = "spring")
+public interface AddressMapper {
 
-    public AddressDto fromEntity(Address entity) {
-        AddressDto addressDto = new AddressDto();
-
-        addressDto.setId(entity.getId());
-        addressDto.setStreet(entity.getStreet());
-        addressDto.setCity(entity.getCity());
-        addressDto.setState(entity.getState());
-        addressDto.setZip(entity.getZip());
-        addressDto.setCountry(entity.getCountry());
-
-        return addressDto;
-    }
+    AddressDto fromEntity(Address address);
 
 }
